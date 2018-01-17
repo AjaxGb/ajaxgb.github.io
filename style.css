@@ -9,6 +9,20 @@ html, body {
 	margin: 0;
 	box-sizing: border-box;
 }
+q {
+	quotes: "“" "”" "‘" "’";
+}
+a.small-button {
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 3px;
+	border: 1px solid;
+	margin-right: 10px;
+}
+a.small-button:last-child {
+	margin-right: 0;
+}
 ::-webkit-scrollbar {
 	width: 10px;
 	height: 10px;
@@ -209,6 +223,9 @@ a[href^="tel:"]::before {
 	border-radius: 5px;
 	padding: 25px;
 }
+#page article:last-child {
+	margin-bottom: 0;
+}
 #page article.has-img {
 	min-height: 350px;
 }
@@ -260,4 +277,20 @@ a[href^="tel:"]::before {
 #page article main:first-child p:first-child,
 #page article > p:first-child {
 	margin-top: 0;
+}
+#page article ul,
+#page article ol {
+	overflow: auto;
+}
+#page article li {
+	margin-top: 5px;
+}
+#page article a:link {
+	color: #181e52;
+}
+#page article a:visited {
+	color: #6a2077;
+}
+#page article a:active {
+	color: #c02;
 }
