@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sol Toder</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+	<header id="sidebar">
+		<img src="/img/me.jpg" alt="My handsome mug">
+		<h1>Sol Toder</h1>
+		<div class="contact">
+			<a href="mailto:soldevlintoder@gmail.com">soldevlintoder@gmail.com</a>
+			<a href="tel:+1-845-249-9867">(845) 249-9867</a>
+		</div>
+		<nav id="navbar" class="static-chevron">
+			<div class="selector"></div>
+			<a {side_link[/]}>OVERVIEW</a>
+			<a {side_link[/portfolio]}>PORTFOLIO</a>
+			<a {side_link[/resume]}>RESUMÉ</a>
+			<a {side_link[/contact]}>CONTACT</a>
+		</nav>
+	</header>
+	<div id="page-wrapper">
+		<div class="loading-bar-wrapper">
+			<div class="loading-bar-text">LOADING</div>
+			<div class="loading-bar-bg"><div class="loading-bar"></div></div>
+		</div>
+		<main id="page">
+{page_fragment}
+		</main>
+	</div>
+	<script src="/dynamic-navbar.js"></script>
+</body>
+</html>
