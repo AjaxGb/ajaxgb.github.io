@@ -4,8 +4,9 @@ var nav = document.getElementById("navbar"),
     currLink = nav.getElementsByClassName("current")[0],
     sel = nav.getElementsByClassName("selector")[0],
     pageEl = document.getElementById("page"),
-    wrapEl = document.getElementById("page-wrapper"),
-    loadBar = wrapEl.getElementsByClassName("loading-bar")[0],
+    pageWrapEl = document.getElementById("page-wrapper"),
+    loadWrapEl = pageWrapEl.getElementsByClassName("loading-bar-wrapper")[0],
+    loadBarEl = loadWrapEl.getElementsByClassName("loading-bar")[0],
     loadReq, fadeOutDelay, fadeInCallback;
 
 sel.style.top = nav.getElementsByClassName("current")[0].offsetTop + "px";
@@ -77,12 +78,13 @@ function loadPage(path, options) {
 			this.onerror();
 			return;
 		}
-		loadBar.style.width = "100%";
+		loadBarEl.style.width = "100%";
 		loadReq = null;
 		
 		var pageFragment = this.response;
 		function fadeIn() {
-			wrapEl.classList.remove("loading");
+			pageWrapEl.classList.remove("loading");
+			loadWrapEl.classList.remove("hidden");
 			pageEl.innerHTML = pageFragment;
 			pageEl.scrollTop = options.scrollTop || 0;
 			if (!options.dontChangeURL) {
@@ -92,6 +94,7 @@ function loadPage(path, options) {
 		
 		if (fadeOutDelay) {
 			fadeInCallback = fadeIn;
+			loadWrapEl.classList.add("hidden");
 		} else {
 			fadeIn();
 		}
@@ -101,12 +104,12 @@ function loadPage(path, options) {
 		window.location = path;
 	};
 	loadReq.onprogress = function(e) {
-		loadBar.style.width = (e.loaded * 100 / e.total) + "%";
+		loadBarEl.style.width = (e.loaded * 100 / e.total) + "%";
 	};
 	
 	loadReq.send();
-	wrapEl.classList.add("loading");
-	loadBar.style.width = 0;
+	pageWrapEl.classList.add("loading");
+	loadBarEl.style.width = 0;
 	
 	fadeOutDelay = fadeOutDelay || setTimeout(function() {
 		fadeOutDelay = null;

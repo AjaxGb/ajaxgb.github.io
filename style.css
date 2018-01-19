@@ -179,12 +179,15 @@ a[href^="tel:"]::before {
 	position: absolute;
 	padding: 15px 20px;
 	background: #a5cbf3;
-	-webkit-transition: visible 0.5s linear; /* Safari */
-	transition: visible 0.5s linear;
-	visibility: hidden;
+	-webkit-transition: opacity 0.3s linear; /* Safari */
+	transition: opacity 0.3s linear;
+	opacity: 0;
 }
 .loading .loading-bar-wrapper {
-	visibility: visible;
+	opacity: 1;
+}
+.loading-bar-wrapper.hidden {
+	opacity: 0;
 }
 .loading-bar-text {
 	font-family: "Oswald", "Arial Narrow", sans-serif;
@@ -273,6 +276,7 @@ a[href^="tel:"]::before {
 	height: 6px;
 	background: black;
 	border-radius: 100%;
+	flex-shrink: 0;
 }
 #page article header > *:first-child:before {
 	content: none;
