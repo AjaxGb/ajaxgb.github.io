@@ -240,6 +240,7 @@ a.small-button:last-child {
 	border-radius: 5px;
 }
 #page article {
+	position: relative;
 	max-width: 1000px;
 	min-width: 600px;
 	overflow: auto;
@@ -253,6 +254,7 @@ a.small-button:last-child {
 	margin-bottom: 0;
 }
 #page article > img {
+	position: relative;
 	border-radius: 3px;
 	float: left;
 	margin: 0 20px 0 0;
@@ -323,4 +325,34 @@ a.small-button:last-child {
 }
 #page article li {
 	margin-top: 5px;
+}
+#page article blockquote {
+	display: inline-block;
+	position: relative;
+	padding: 20px 35px 35px;
+	border-radius: 5px;
+}
+#page article blockquote:before,
+#page article blockquote:after {
+	position: absolute;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 60px;
+	color: #00000060;
+}
+#page article blockquote:before {
+	content: "\201C";
+	top: -5px;
+	left: 5px;
+}
+#page article blockquote:after {
+	content: "\201D";
+	bottom: -30px;
+	right: 5px;
+}
+#page article blockquote.twitter-tweet {
+	background: white;
+	max-width: 500px;
+}
+#page article twitterwidget {
+	overflow: auto;
 }

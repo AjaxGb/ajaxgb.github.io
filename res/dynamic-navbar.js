@@ -87,6 +87,13 @@ function loadPage(path, options) {
 			pageWrapEl.classList.remove("loading");
 			loadWrapEl.classList.remove("hidden");
 			pageEl.innerHTML = pageFragment;
+			
+			try {
+				twttr.widgets.load(pageEl);
+			} catch (e) {
+				// I tried
+			}
+			
 			pageEl.scrollTop = options.scrollTop || 0;
 			if (!options.dontChangeURL) {
 				history.pushState(null, "", path);
