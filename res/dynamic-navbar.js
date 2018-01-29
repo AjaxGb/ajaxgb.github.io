@@ -55,6 +55,7 @@ function selectSidebarLink(newLink) {
 // options: sideLink, dontChangeURL, scrollTop
 function loadPage(path, options) {
 	path = normalizePath(path);
+	options = options || {};
 	
 	var sideLink = options.sideLink
 	    	|| nav.querySelector('a[href="' + path + '"]'),
