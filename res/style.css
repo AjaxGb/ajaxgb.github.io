@@ -111,14 +111,14 @@ a.small-button:last-child {
 	display: inline-block;
 	padding-right: 10px;
 }
-a::before { text-decoration: underline; } /* Fix IE underline bug */
-a[href^="mailto:"]::before {
+#sidebar a::before { text-decoration: underline; } /* Fix IE underline bug */
+#sidebar a[href^="mailto:"]::before {
 	display: inline-block;
 	content: "📧";
 	margin-right: 5px;
 	text-decoration: none;
 }
-a[href^="tel:"]::before {
+#sidebar a[href^="tel:"]::before {
 	display: inline-block;
 	content: "☎";
 	margin-right: 5px;
@@ -284,6 +284,9 @@ a[href^="tel:"]::before {
 #page h1 {
 	font-family: "Oswald", "Arial Narrow", sans-serif;
 	font-size: 45px;
+}
+#page h3 {
+	display: inline-block;
 }
 #page article p {
 	margin-top: 10px;

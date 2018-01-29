@@ -118,4 +118,6 @@ function loadPage(path, options) {
 			fadeInCallback = null;
 		}
 	}, 200);
+	
+	return false;
 }
