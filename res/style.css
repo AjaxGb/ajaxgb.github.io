@@ -109,6 +109,7 @@ a.small-button:last-child {
 }
 #sidebar .contact a {
 	display: inline-block;
+	position: relative;
 	padding-right: 10px;
 }
 #sidebar a::before { text-decoration: underline; } /* Fix IE underline bug */
@@ -121,6 +122,17 @@ a.small-button:last-child {
 #sidebar a[href^="tel:"]::before {
 	display: inline-block;
 	content: "☎";
+	margin-right: 5px;
+	text-decoration: none;
+}
+#sidebar a[href^="https://www.linkedin.com"]::before {
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	content: "";
+	width: 1em;
+	height: 1em;
+	background: no-repeat center url("/img/linkedin-icon.svg");
 	margin-right: 5px;
 	text-decoration: none;
 }
@@ -240,12 +252,12 @@ a.small-button:last-child {
 #page article:last-child {
 	margin-bottom: 0;
 }
-#page article img {
+#page article > img {
 	border-radius: 3px;
 	float: left;
 	margin: 0 20px 0 0;
 }
-#page article:nth-child(even) img {
+#page article:nth-child(even) > img {
 	float: right;
 	margin: 0 0 0 20px;
 }
@@ -294,6 +306,16 @@ a.small-button:last-child {
 #page article main:first-child p:first-child,
 #page article > p:first-child {
 	margin-top: 0;
+}
+#page article .gallery > * {
+	display: inline-block;
+	margin: 5px 10px;
+	border: 2px solid #212535;
+	border-radius: 3px;
+}
+#page article .gallery > * * {
+	margin: 0;
+	vertical-align: bottom;
 }
 #page article ul,
 #page article ol {
