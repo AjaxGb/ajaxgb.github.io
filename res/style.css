@@ -9,9 +9,13 @@ html, body {
 	margin: 0;
 	box-sizing: border-box;
 }
-h1, h2, strong {
+h1, h2 {
 	font-weight: normal;
 	text-shadow: 1px 0;
+}
+strong {
+	font-weight: normal;
+	text-shadow: 0.7px 0;
 }
 time {
 	white-space: nowrap;
