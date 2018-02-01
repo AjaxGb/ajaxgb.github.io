@@ -9,6 +9,10 @@ html, body {
 	margin: 0;
 	box-sizing: border-box;
 }
+h1, h2, strong {
+	font-weight: normal;
+	text-shadow: 1px 0;
+}
 time {
 	white-space: nowrap;
 }
@@ -298,9 +302,6 @@ a.small-button:last-child {
 #page h1 {
 	font-family: "Oswald", "Arial Narrow", sans-serif;
 	font-size: 45px;
-}
-#page h3 {
-	display: inline-block;
 }
 #page article p {
 	margin-top: 10px;
