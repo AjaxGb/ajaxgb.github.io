@@ -307,11 +307,16 @@ a.small-button:last-child {
 	font-family: "Oswald", "Arial Narrow", sans-serif;
 	font-size: 45px;
 }
-#page article p {
+#page article main > * {
 	margin-top: 10px;
 }
+#page article main > * p,
+#page article main li {
+	margin-top: 5px;
+}
 #page article main:first-child p:first-child,
-#page article > p:first-child {
+#page article > p:first-child,
+#page article li:first-child {
 	margin-top: 0;
 }
 #page article .gallery > * {
@@ -327,9 +332,6 @@ a.small-button:last-child {
 #page article ul,
 #page article ol {
 	overflow: auto;
-}
-#page article li {
-	margin-top: 5px;
 }
 #page article blockquote {
 	display: inline-block;
