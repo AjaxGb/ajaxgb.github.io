@@ -362,6 +362,7 @@ a.small-button:last-child {
 		overflow: visible;
 		margin: 0;
 		padding: 18px 20px 15px;
+		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 		height: 210px;
@@ -404,8 +405,53 @@ a.small-button:last-child {
 }
 
 @media (max-width: 725px) {
+	#sidebar {
+		height: 170px;
+		padding: 0 10px;
+	}
+	#sidebar::after {
+		top: 165px;
+	}
 	#sidebar img {
 		display: none;
+	}
+	#sidebar .personal-info {
+		margin-left: 0;
+	}
+	#sidebar h1 {
+		font-size: 40px;
+	}
+	#sidebar .contact {
+		font-size: 15px;
+	}
+	#sidebar nav {
+		width: 200px;
+	}
+	#sidebar nav a {
+		font-size: 35px;
+		height: 48px;
+		line-height: 45px;
+		padding-left: 35px;
+	}
+	#sidebar nav a:hover {
+		padding-left: 40px;
+	}
+	#sidebar nav .selector {
+		height: 48px;
+		background-size: 20px 29px;
+	}
+	#page {
+		padding: 15px 10px 10px;
+	}
+	#page article {
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+	#page article > img {
+		margin-right: 10px;
+	}
+	#page article:nth-child(even) > img {
+		margin-left: 10px;
 	}
 }
 
@@ -414,12 +460,19 @@ a.small-button:last-child {
 		min-width: 0;
 	}
 	#page article > img {
-		max-width: 50%;
+		max-width: 40%;
+		max-height: 40%;
 	}
 }
 
 @media (max-width: 525px) {
 	#sidebar a::before {
 		content: none!important;
+	}
+}
+
+@media (pointer: none) {
+	#sidebar nav a:hover {
+		padding-left: 0;
 	}
 }
