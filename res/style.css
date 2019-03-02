@@ -103,6 +103,7 @@ a.small-button:last-child {
 	font-size: 56px;
 	border-bottom: 11px double #121425;
 	line-height: 1.2;
+	white-space: nowrap;
 }
 #sidebar .contact {
 	margin: 10px 0 15px;
@@ -399,5 +400,26 @@ a.small-button:last-child {
 		max-width: unset;
 		margin: 0;
 		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 725px) {
+	#sidebar img {
+		display: none;
+	}
+}
+
+@media (max-width: 640px) {
+	#page article {
+		min-width: 0;
+	}
+	#page article > img {
+		max-width: 50%;
+	}
+}
+
+@media (max-width: 525px) {
+	#sidebar a::before {
+		content: none!important;
 	}
 }
