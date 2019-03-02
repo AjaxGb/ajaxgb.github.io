@@ -462,7 +462,7 @@ a.small-button:last-child {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 415px) {
 	#sidebar a::before {
 		content: none!important;
 	}
