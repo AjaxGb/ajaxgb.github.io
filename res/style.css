@@ -268,37 +268,31 @@ a.small-button:last-child {
 	float: right;
 	margin: 0 0 0 20px;
 }
-#page article header {
-	display: table;
-	
+#page article > h1 {
+	line-height: 1;
+	margin-bottom: 0.2em;
+}
+.divider-label {
 	display: flex;
-	align-items: center;
-	border-bottom: black 3px double;
-	padding-right: 5px;
+	margin: 10px -1px;
 }
-#page article header > * {
-	display: table-cell;
-	vertical-align: middle;
-	
-	display: inline-flex;
-	align-items: center;
-	line-height: 1.5;
+.divider-label > * {
+	display: inline-block;
+	padding: 1px 6px;
+	border: 1px solid currentColor;
+	border-radius: 4px;
 }
-#page article header > h1 {
-	margin-top: -14px;
-}
-#page article header > *:before {
+.divider-label::before,
+.divider-label::after {
 	content: "";
 	display: inline-block;
-	margin: 0 15px;
-	width: 6px;
-	height: 6px;
-	background: black;
-	border-radius: 100%;
-	flex-shrink: 0;
+	height: 0;
+	margin: auto 0;
+	flex-grow: 1;
+	border-top: 5px double currentColor;
 }
-#page article header > *:first-child:before {
-	content: none;
+.divider-label::before {
+	max-width: 15px;
 }
 #page h1 {
 	font-family: "Oswald", "Arial Narrow", sans-serif;
