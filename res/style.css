@@ -247,7 +247,6 @@ a.small-button:last-child {
 #page article {
 	position: relative;
 	max-width: 1000px;
-	min-width: 600px;
 	overflow: auto;
 	margin: 0 auto 20px;
 	background: #cfddff;
@@ -263,6 +262,8 @@ a.small-button:last-child {
 	border-radius: 3px;
 	float: left;
 	margin: 0 20px 0 0;
+	max-width: 40%;
+	max-height: 40%;
 }
 #page article:nth-child(even) > img {
 	float: right;
@@ -413,10 +414,7 @@ a.small-button:last-child {
 		top: 165px;
 	}
 	#sidebar img {
-		display: none;
-	}
-	#sidebar .personal-info {
-		margin-left: 0;
+		height: 150px;
 	}
 	#sidebar h1 {
 		font-size: 40px;
@@ -455,17 +453,16 @@ a.small-button:last-child {
 	}
 }
 
-@media (max-width: 640px) {
-	#page article {
-		min-width: 0;
+@media (max-width: 575px) {
+	#sidebar img {
+		display: none;
 	}
-	#page article > img {
-		max-width: 40%;
-		max-height: 40%;
+	#sidebar .personal-info {
+		margin-left: 0;
 	}
 }
 
-@media (max-width: 525px) {
+@media (max-width: 400px) {
 	#sidebar a::before {
 		content: none!important;
 	}
