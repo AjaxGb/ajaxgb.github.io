@@ -7,6 +7,7 @@ var nav = document.getElementById("navbar"),
     pageWrapEl = document.getElementById("page-wrapper"),
     loadWrapEl = pageWrapEl.getElementsByClassName("loading-bar-wrapper")[0],
     loadBarEl = loadWrapEl.getElementsByClassName("loading-bar")[0],
+    genTimestamp = document.head.querySelector('meta[itemprop="gen-timestamp"]').content,
     loadReq, fadeOutDelay, fadeInCallback;
 
 sel.style.top = nav.getElementsByClassName("current")[0].offsetTop + "px";
@@ -62,6 +63,10 @@ function loadPage(path, options) {
 		fragURL = (path === "/")
 			? "/fragments/index.html"
 			: "/fragments" + path + ".html";
+	
+	// Avoid cache issues
+	fragURL += "?t=" + genTimestamp;
+	
 	selectSidebarLink(sideLink);
 	
 	if (loadReq) loadReq.abort();
