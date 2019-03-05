@@ -304,6 +304,7 @@ a.small-button:last-child {
 }
 #page article main p,
 #page article main li,
+#page article main details,
 #page article main details > * > li:first-child {
 	margin-top: 5px;
 }
