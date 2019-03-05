@@ -302,8 +302,9 @@ a.small-button:last-child {
 #page article main > * {
 	margin-top: 10px;
 }
-#page article main > * p,
-#page article main li {
+#page article main p,
+#page article main li,
+#page article main details > * > li:first-child {
 	margin-top: 5px;
 }
 #page article main:first-child p:first-child,
@@ -324,6 +325,15 @@ a.small-button:last-child {
 #page article ul,
 #page article ol {
 	overflow: auto;
+}
+#page article details summary {
+	text-shadow: 0.7px 0;
+}
+#page article details[open] summary.colon-summary {
+	text-shadow: inherit;
+}
+#page article details[open] summary.colon-summary::after {
+	content: ":";
 }
 #page article blockquote {
 	display: inline-block;

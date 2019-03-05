@@ -1,4 +1,81 @@
 <article>
+	<img src="/img/portfolio/jeff-proj.png">
+	<h1>Jefferson Project Data Viewer</h1>
+	<div class="divider-label">
+		<time>2018</time>
+	</div>
+	<main>
+		<p>
+		The Jefferson Project at Lake George is a non-profit environmental partnership between Rensselaer Polytechnic Institute, IBM Research, and The Fund for Lake George. Part of the project involves monitoring the lake with a number of sensors, which generate a lot of data every day. This project aims to display that data in an intuitive and immersive way, projecting the weather and water readings into a virtual recreation of Lake George and allowing you to watch them play out. Built using the Unity engine and C#, plus some rendering and compute shader programming.
+		</p>
+		<p>
+		<a class="small-button" href="https://jeffersonproject.rpi.edu/about">
+			Info About the Jefferson Project
+		</a>
+		</p>
+		<p>
+		Development of the viewer was started by <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-mhender">Michael Henderson</a>, an IBM researcher. I was brought on to optimize and further develop the project.
+		</p>
+		<details>
+		<summary class="colon-summary">My notable contributions</summary>
+		<ul>
+			<li>Greatly optimized the terrain system, which was one of the main performance bottlenecks. The terrain system uses high-resolution draped terrain images pulled from a remote server, rather than the texture splatting more commonly seen in games. This made balancing looks, network speeds, memory usage, and GPU bandwidth a challenge. By improving chunk sizing and resizing, caching, data structures, and mesh creation, I was able to make it run at a consistent framerate on target systems.</li>
+			<li>Greatly optimized the system used for drawing wind and water currents. The updated system makes heavy use of the GPU for updating and rendering particles, leading to an extreme improvement in performance.</li>
+			<li>Optimized and improved the system that placed points of interest in the world, such as sensor platforms. PoI are now created dynamically based on data from the remote server instead of placed by hand, meaning that new sensors will be automatically integrated.</li>
+			<li>Added completely new holographic displays to all sensor platforms, allowing users to easily bring up a graph of any value the sensor tracks. The graph can display the progression of a value over time, or compare two different values.</li>
+			<li>Added the ability for the automatic progression of time to halt and wait for necessary resources to load.</li>
+			<li>Redesigned a large part of the UI for better looks, user experience, and performance. This includes redesigning the date/time selector and the mini map, and creating the compass rose at the bottom and the "Waiting for" display at the top.</li>
+			<li>Integrated a day-night cycle and weather plugin with the existing date and time system.</li>
+			<li>Began work on displaying the cloud density data. The current system uses horizontal slices, but I was looking into a raytraced rendering system.</li>
+		</ul>	
+		</details>
+		<p>
+		Unfortunately, the data viewer is not publicly available, and is only used internally by the research team. Please enjoy some screenshots of it instead.
+		</p>
+		<p class="gallery">
+			<a href="/img/screenshots/jp-viewer/jp1.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp1.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp2.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp2.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp3.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp3.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp4.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp4.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp5.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp5.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp6.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp6.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp7.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp7.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp8.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp8.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp9.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp9.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp10.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp10.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp11.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp11.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp12.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp12.jpg">
+			</a>
+			<a href="/img/screenshots/jp-viewer/jp13.jpg">
+				<img src="/img/screenshots/jp-viewer/th-jp13.jpg">
+			</a>
+		</p>
+	</main>
+</article>
+<article>
 	<img src="/img/portfolio/wop.png">
 	<h1>World of Plankton</h1>
 	<div class="divider-label">
@@ -6,23 +83,22 @@
 	</div>
 	<main>
 		<p>
-		World of Plankton was created by the outreach arm of <a href="http://jeffersonproject.rpi.edu/">the Jefferson Project at Lake George</a>, a non-profit environmental partnership between Rensselaer Polytechnic Institute, IBM Research, and The Fund for Lake George. It is a 3D educational and explorative game in which the player travels the waters of Lake George, finding and examining the fish and plankton that inhabit them.
+		World of Plankton was created by the outreach arm of <a href="http://jeffersonproject.rpi.edu/">the Jefferson Project at Lake George</a>, a non-profit environmental partnership between Rensselaer Polytechnic Institute, IBM Research, and The Fund for Lake George. It is a museum installation centering around a virtual touch pool, in which a number of users can view and interact with the fish and plankton found in Lake George. The touch pool was built using the Unity engine and C#.
 		</p>
 		<p>
 		<a class="small-button" href="http://www.arts.rpi.edu/~ruiz/WorldOfPlankton/WOP.htm">
 			Project Website
 		</a>
+		<a class="small-button" href="https://vimeo.com/293483884">
+			Video of the Touch Pool
+		</a>
 		</p>
 		<p>
-		The version of the game that is available for download on the project website above is a desktop game that was developed <strong>before I joined the team</strong>. I was brought on to port the game from desktops and controller input to tablets and touch input, and at the same time to clean the game up, make it more accessible, and prepare it for museum release. Unfortunately, no public release of the new, tablet version of the game which I am developing is currently available. Please enjoy some screenshots of the game instead.
+		The version of the game that is available for download on the project website above is a desktop game that was developed <strong>before I joined the team</strong>. I was brought on to port the game from desktops and controller input to a touch-driven museum experience. Due to my input, the game was transformed from a first-person exploration game, suitable for one player at a time, into a top-down virtual touch pool.
 		</p>
-		<p class="gallery">
-		<a href="/img/screenshots/wop/wop1.jpg"><img src="/img/screenshots/wop/th-wop1.jpg"></a>
-		<a href="/img/screenshots/wop/wop2.jpg"><img src="/img/screenshots/wop/th-wop2.jpg"></a>
-		<a href="/img/screenshots/wop/wop3.jpg"><img src="/img/screenshots/wop/th-wop3.jpg"></a>
-		<a href="/img/screenshots/wop/wop4.jpg"><img src="/img/screenshots/wop/th-wop4.jpg"></a>
-		<a href="/img/screenshots/wop/wop5.jpg"><img src="/img/screenshots/wop/th-wop5.jpg"></a>
-		<a href="/img/screenshots/wop/wop6.jpg"><img src="/img/screenshots/wop/th-wop6.jpg"></a>
+		<p>
+		At time of writing, The World of Plankton is installed at the ECHO, Leahy Center for Lake Champlain.
+		</p>
 		</p>
 	</main>
 </article>
@@ -88,7 +164,7 @@
 	</div>
 	<main>
 		<p>
-		A Chrome plugin that adds keyboard controls and shortcuts to Chrome's built-in video player. At time of writing the plugin has over 5,000 users and an average 4.25 star rating. Built using JavaScript, with a little HTML and CSS for the options menu.
+		A Chrome plugin that adds keyboard controls and shortcuts to Chrome's built-in video player. At time of writing the plugin has over 7,000 users and an average 4.25 star rating. Built using JavaScript, with a little HTML and CSS for the options menu.
 		</p>
 		<p>
 		<a class="small-button" href="https://github.com/AjaxGb/Better-Chrome-Native-Video">
