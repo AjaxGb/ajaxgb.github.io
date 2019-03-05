@@ -434,6 +434,7 @@ a.small-button:last-child {
 	#sidebar nav a:hover {
 		padding-left: 40px;
 	}
+	#sidebar nav.static-chevron .current,
 	#sidebar nav .selector {
 		height: 48px;
 		background-size: 20px 29px;
