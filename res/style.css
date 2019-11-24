@@ -1,6 +1,7 @@
 html, body {
 	height: 100%;
 	background: #212535;
+	background: repeating-linear-gradient(45deg, #212535, #212535 6px, #121425 7px, #212535 8px);
 	font-family: "Open Sans", sans-serif;
 }
 * {
@@ -398,6 +399,9 @@ a.small-button:last-child {
 	#sidebar img {
 		width: unset;
 		height: 100%;
+	}
+	#sidebar .job-title {
+		display: none;
 	}
 	#sidebar .personal-info {
 		margin: 0 5px;
