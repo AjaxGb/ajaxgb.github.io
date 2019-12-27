@@ -189,6 +189,7 @@ a.small-button:last-child {
 	margin-left: 345px;
 	justify-content: center;
 	align-items: center;
+	min-height: 100%;
 }
 .loading-bar-wrapper {
 	display: inline-flex;
