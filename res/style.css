@@ -266,7 +266,8 @@ a.small-button:last-child {
 	max-width: 40%;
 	max-height: 40%;
 }
-#page article:nth-child(even) > img {
+#page article:not(.images-left):nth-child(even) > img,
+#page article.images-right > img {
 	float: right;
 	margin: 0 0 0 20px;
 }
