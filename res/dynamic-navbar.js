@@ -13,36 +13,35 @@ var nav = document.getElementById("navbar"),
 sel.style.top = nav.getElementsByClassName("current")[0].offsetTop + "px";
 nav.classList.remove("static-chevron");
 
-nav.onclick = function(e) {
-	if (e.target.tagName === "A") {
-		loadPage(e.target.pathname, {sideLink: e.target});
-		return false;
+addEventListener("click", function(e) {
+	if (e.target.tagName === "A" && e.target.getAttribute("href")[0] === "/") {
+		if (loadPage(e.target.pathname)) return false;
 	}
-};
+});
 
-onpopstate = function(e) {
+addEventListener("popstate", function(e) {
 	loadPage(location.pathname, {
 		dontChangeURL: true,
 		scrollTop: (e.state && e.state.pageScroll)
 			? e.state.pageScroll
 			: 0
 	});
-};
+});
 
 if (history.state && history.state.pageScroll) {
 	pageEl.scrollTop = history.state.pageScroll;
 }
 
-onbeforeunload = function() {
+addEventListener("beforeunload", function() {
 	history.replaceState({
 		pageScroll: pageEl.scrollTop
 	}, "");
-};
+});
 
 function normalizePath(path) {
 	path = path.replace(/\/$/, "");
 	if (!path) return "/";
-	if (path[0] != "/") return "/" + path;
+	if (path[0] !== "/") return "/" + path;
 	return path;
 }
 
@@ -53,16 +52,15 @@ function selectSidebarLink(newLink) {
 	sel.style.top = currLink.offsetTop + "px";
 }
 
-// options: sideLink, dontChangeURL, scrollTop
+// options: dontChangeURL, scrollTop
 function loadPage(path, options) {
 	path = normalizePath(path);
 	options = options || {};
 	
-	var sideLink = options.sideLink
-	    	|| nav.querySelector('a[href="' + path + '"]'),
-		fragURL = (path === "/")
-			? "/fragments/index.html"
-			: "/fragments" + path + ".html";
+	var sideLink = nav.querySelector('a[href="' + path + '"]');
+	if (!sideLink) return false;
+
+	var fragURL = (path === "/") ? "/fragments/index.html" : "/fragments" + path + ".html";
 	
 	// Avoid cache issues
 	fragURL += "?t=" + genTimestamp;
@@ -132,5 +130,5 @@ function loadPage(path, options) {
 		}
 	}, 200);
 	
-	return false;
+	return true;
 }
