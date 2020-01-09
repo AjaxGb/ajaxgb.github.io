@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" href="/favicon.png">
 	<script async src="https://platform.twitter.com/widgets.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta itemprop="gen-timestamp" content="1577480644.880505">
+	<meta itemprop="gen-timestamp" content="1578611156.902245">
 </head>
 <body>
 	<header id="sidebar">
@@ -37,6 +37,55 @@
 		</div>
 		<main id="page">
 <article>
+	<img src="/img/portfolio/chatterbugs.png">
+	<h1>Chatterbugs</h1>
+	<div class="divider-label">
+		<time>2019</time>
+	</div>
+	<main>
+		<p>
+			An experimental top-down multiplayer prototype, running in the browser, written in JavaScript and Python. Developed in a little over two months by myself and Axel Stewart, another RPI student. It was our final project for Experimental Game Design, and was also displayed at the 2019 GameFest expo in Albany.
+		</p>
+		<p>
+		<a class="small-button" href="https://github.com/AjaxGb/Chatterbugs">
+			View on GitHub
+		</a>
+		<a class="small-button" href="/res/chatterbugs-gameplay.mp4">
+			Video of Gameplay
+		</a>
+		</p>
+		<p>
+			The concept was Axel's brainchild, although the name was mine. You control a small critter made of text, in a world also made of text. You can consume the text around you, adding the letters and symbols to your inner store of text, and then regurgitate them to speak to other players or build things. In particular, player chat is pulled from your gut, meaning you can't actually type a phrase until you've gathered the necessary letters. We were interested in the ways player communication, expression, and society might develop in a game where language itself was the primary resource.
+		</p>
+		<p>
+			As a browser game, the client is written in JavaScript. The server is written in Python, and communicates with the client using WebSockets. Both were written from scratch, to provide maximum control over the internals of the engine and as a learning experience. In addition to world state and player positions, the engine synchronizes each individual letter as it enters or exits the player's gut, and smooths motion as appropriate. This was much more complex than it sounds, but the full animation from world to gut and from gut to chat bubble was essential in communicating the core mechanic to players.
+		</p>
+	</main>
+</article>
+<article>
+	<img src="/img/portfolio/acacia-bay.png">
+	<h1>Acacia Bay</h1>
+	<div class="divider-label">
+		<time>2019</time>
+	</div>
+	<main>
+		<p>
+			A 2D submarine game built in two weeks using Unity and C# for RPI's Experimental Game Design course. I worked with two other students, with me doing the programming and level design.
+		</p>
+		<p>
+		<a class="small-button" href="https://github.com/AjaxGb/Murkwater-Curiosities">
+			View on GitHub
+		</a>
+		</p>
+		<p>
+			In the game you captain a small privately-owned submarine named the Acacia Bay, which has been hired to explore a strange sinkhole in Maine and document the species found within. You can either kill the creatures from a distance with your laser cannon or attempt to capture them alive with your short-range sonic blast. Who knows what waits at the bottom of the pit?
+		</p>
+		<p>
+			I'm pretty proud of the way the sub controls. It feels like a heavy object in water but isn't unpleasantly floaty, and it reacts nicely with the surface. For a two week, three person project I think the game has good atmosphere and decent gameplay.
+		</p>
+	</main>
+</article>
+<article>
 	<img src="/img/portfolio/jeff-proj.png">
 	<h1>Jefferson Project Data Viewer</h1>
 	<div class="divider-label">
@@ -44,7 +93,7 @@
 	</div>
 	<main>
 		<p>
-		The Jefferson Project at Lake George is a non-profit environmental partnership between Rensselaer Polytechnic Institute, IBM Research, and The Fund for Lake George. Part of the project involves monitoring the lake with a number of sensors, which generate a lot of data every day. This project aims to display that data in an intuitive and immersive way, projecting the weather and water readings into a virtual recreation of Lake George and allowing you to watch them play out. Built using the Unity engine and C#, plus some rendering and compute shader programming.
+			The Jefferson Project at Lake George is a non-profit environmental partnership between Rensselaer Polytechnic Institute, IBM Research, and The Fund for Lake George. Part of the project involves monitoring the lake with a number of sensors, which generate a lot of data every day. This project aims to display that data in an intuitive and immersive way, projecting the weather and water readings into a virtual recreation of Lake George and allowing you to watch them play out over time. Built using the Unity engine and C#, plus some rendering and compute shader programming.
 		</p>
 		<p>
 		<a class="small-button" href="https://jeffersonproject.rpi.edu/about">
@@ -52,7 +101,7 @@
 		</a>
 		</p>
 		<p>
-		Development of the viewer was started by <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-mhender">Michael Henderson</a>, an IBM researcher. I was brought on by him to optimize and further develop the project.
+			Development of the viewer was started by <a href="https://researcher.watson.ibm.com/researcher/view.php?person=us-mhender">Michael Henderson</a>, an IBM researcher. I was brought on by him to optimize and further develop the project.
 		</p>
 		<details>
 		<summary class="colon-summary">My notable contributions</summary>
@@ -132,7 +181,7 @@
 		</a>
 		</p>
 		<p>
-		The version of the game that is available for download on the project website above is a desktop game that was developed <strong>before I joined the team</strong>. I was brought on to port the game from desktops and controller input to a touch-driven museum experience. Due to my input, the game was transformed from a first-person exploration game, suitable for one player at a time, into a top-down virtual touch pool.
+		The version of the game that is available for download on the project website above is a desktop game that was developed <strong>before</strong> I joined the team. I was brought on to port the game from desktops and controller input to a touch-driven museum experience. We explored a number of options for converting the first-person exploration game into something which would attract the attention of patrons, be usable by multiple people at a time, and provide a full experience in only a few minutes. Eventually I introduced the concept of a total conversion into a top-down virtual touch pool, where players could watch different creatures swimming by and &ldquo;grab&rdquo; individuals for closer examination.
 		</p>
 		<p>
 		At time of writing, The World of Plankton is installed at the ECHO, Leahy Center for Lake Champlain.
@@ -159,7 +208,7 @@
 		</a>
 		</p>
 		<p>
-		The game is a 2D sidescroller, in which a hamster-shaped alien crash-lands on Earth. Using his mental mastery over technology, he must take control of the Earthlings' appliances to get his ship back and return home. Possessing a machine leaves your body comatose and defenseless. I love the animation Steve did of the little guy twitching on the ground.
+		The game is a 2D sidescroller, in which a hamster-like alien crash-lands on Earth. Using his mental mastery over technology, he must take control of the Earthlings' appliances to get his ship back and return home. Possessing a machine leaves your body comatose and defenseless. I love the animation Steve did of the little guy twitching on the ground.
 		</p>
 	</main>
 </article>
@@ -171,7 +220,7 @@
 	</div>
 	<main>
 		<p>
-		My entry to Gynvael's Winter GameDev Challenge 2017/18. Contestants were given four weeks to create a turn-based tactical game from scratch, with stringent space requirements. All JavaScript, image files, and other resources had to be packed into a single HTML file, which was 20 KB or smaller. Among other tactics, I ended up using a Python script to compile all my sources together and compress them into a self-extracting PNG file.
+		My entry to Gynvael's Winter GameDev Challenge 2017/18. Contestants were given four weeks to create a turn-based tactical game from scratch, with strict space limitations. All JavaScript, image files, and other resources had to be packed into a single HTML file, which was 20 KB or smaller. Among other tactics, I ended up using a Python script to compile all my sources together and compress them into a self-extracting PNG file.
 		</p>
 		<p>
 		<a class="small-button" href="https://github.com/AjaxGb/forg20k">
@@ -191,7 +240,7 @@
 		The game features two competing teams of frogs, as well as a computer-controlled team of bugs that can be eaten to regain health. It is played using the left mouse button to drag the camera and to select units, and the right mouse button to direct them.
 		</p>
 		<p>
-		Unfortunately, due to a mix-up on my part regarding the deadline's time zone my submission could not be considered for the final ranking. I'm still happy with the time I spent on it, and proud of the techniques I learned.
+		Unfortunately, due to a mix-up on my part regarding the deadline's time zone my submission could not be considered for the final ranking. I'm still pretty happy with the end product.
 		</p>
 	</main>
 </article>
@@ -202,7 +251,7 @@
 	</div>
 	<main>
 		<p>
-		A Chrome plugin that adds keyboard controls and shortcuts to Chrome's built-in video player. At time of writing the plugin has over 7,000 users and an average 4.25 star rating. Built using JavaScript, with a little HTML and CSS for the options menu.
+		A Chrome plugin that adds keyboard controls and shortcuts to Chrome's built-in video player. At time of writing the plugin has over 7,000 users and an average 4 star rating. Built using JavaScript, with a little HTML and CSS for the options menu.
 		</p>
 		<p>
 		<a class="small-button" href="https://github.com/AjaxGb/Better-Chrome-Native-Video">
@@ -216,7 +265,7 @@
 		In March 2016, I finally got fed up with Chrome's built in HTML5 video player. While basically functional, it had no keyboard controls at all, which made things like skipping ahead or back tedious at best, and challenging at worst.
 		</p>
 		<p>
-		I decided to write a simple Chrome plugin that added the shortcuts I wanted, mostly drawn from Google's own YouTube player. After I'd finished that, it seemed simple enough to polish it up and release it publicly. It certainly wasn't as simple as I'd initially planned, but I've found the process very rewarding.
+		I decided to write a simple Chrome plugin that added the shortcuts I wanted, mostly drawn from Google's own YouTube player. After I'd finished that, it seemed (at the time) like it would be simple enough to polish it up and release it publicly. It certainly wasn't as simple as I'd initially planned, but I've found the process rewarding.
 		</p>
 	</main>
 </article>
@@ -239,7 +288,7 @@
 		</a>
 		</p>
 		<p>
-		The language looks like a series of stylized skulls. Dedicated fans discovered that each pair of skulls corresponds to a spoken word from the webcomic itself, but parsing each skull pair and then finding the correct word on the correct page was time-consuming work. The translator can instantly translate in both directions, and even renders the skulls using HTML5's canvas.
+		The language looks like a series of stylized skulls. Dedicated fans discovered that each pair of skulls corresponds to a spoken word from the webcomic itself, but parsing each skull pair and then finding the correct word on the correct page was time-consuming work. The translator can instantly translate in both directions, and even renders the skulls as you type.
 		</p>
 		<p>
 		Initial development happened in 2016, and was one of my first JavaScript projects. As such, the code was a bit of a mess. In Spring 2018 I returned to the project and rewrote it from the ground up, leaving the code much easier to read and extend. 
@@ -253,10 +302,10 @@
 	</div>
 	<main>
 		<p>
-		A website I coded to help myself and others with the development of Minecraft commands. Minecraft commands can view and edit the NBT (Named Binary Tags) format used in Minecraft's save games, using a JSON-like textual format known as SNBT (Stringified NBT).
+		A web tool I built to help myself and others with the development of Minecraft commands. Minecraft commands can access and edit the <a href="https://minecraft.gamepedia.com/NBT_format">NBT (Named Binary Tags) data format</a> used in Minecraft's save games, using a JSON-like text format known as SNBT (Stringified NBT).
 		</p>
 		<p>
-		This website is a tool that takes an unformatted SNBT tag, checks the syntax for errors, prettifies the tag with line breaks and indentation, and outputs the result. It makes it much easier to spot mistakes in the tag, and can tell you if the tag contains an error without needing to boot up Minecraft.
+		This web tool takes an unformatted SNBT tag, checks it for syntax errors, prettifies the tag with line breaks and indentation, and outputs the result. It makes it much easier to spot mistakes in the tag, and can tell you if the tag contains an error without needing to boot up Minecraft.
 		</p>
 		<p>
 		<a class="small-button" href="https://github.com/AjaxGb/NBTLint/">
@@ -267,7 +316,7 @@
 		</a>
 		</p>
 		<p>
-		The linter has a <em>lot</em> of options to accomodate different formatting preferences. It is also available as a library for use on the web or with Node.js, although to the best of my knowledge this has yet to be used by anybody.
+		The linter has a bunch of options to accomodate different formatting preferences. The central functionality is also available as a library for use on the web or with Node.js, although to the best of my knowledge this has never been used by anybody.
 		</p>
 	</main>
 </article>
@@ -280,7 +329,7 @@
 	<main>
 		<p>
 		A side-scrolling raft game built using the
-		<a href="https://phaser.io/">Phaser</a> JavaScript engine for RPI's Game Development I course by me and four other students.
+		<a href="https://phaser.io/">Phaser</a> JavaScript engine for RPI's Game Development I course. A team project by me and four other students.
 		</p>
 		<p>
 		<a class="small-button" href="https://github.com/swood456/BroFlow/">
@@ -291,15 +340,15 @@
 		</a>
 		</p>
 		<p>
-		For this game, our team was given the prompt <q>Some dudebros pull a prank that goes horribly wrong.</q> The game stars six college fraternity brothers who soap a fountain, accidentally flooding their entire campus. They must escape the flood of suds on a floating mattress, collecting party supplies along the way.
+		For this game, our team was given the prompt <q>Some dudebros pull a prank that goes horribly wrong.</q> The game stars six college fraternity brothers who pour soap into a fountain, accidentally flooding their entire campus. They must escape the flood of suds on a floating mattress, collecting party supplies along the way.
 		</p>
 		<p>
 		My notable contributions:
 		</p>
 		<ul>
 			<li>Procedurally generated scrolling background.</li>
-			<li>A system for randomly spawning obstacles and/or collectibles ahead of the player. The system ended up being used for the grand majority of level design.</li>
-			<li>An unconventional health display, in the form of the number of people on the raft. Taking damage causes bros to fall off. Certain animations will only play if enough bros are present.</li>
+			<li>A system for randomly spawning obstacles and/or collectibles ahead of the player. This system formed the backbone of the game's level design.</li>
+			<li>An unconventional health display, in the form of the number of people on the raft. Taking damage causes bros to fall off. Certain non-essential animations will only play if enough bros are present.</li>
 			<li>Robust player tinting/flashing system.</li>
 			<li>All voice acting (for my sins).</li>
 		</ul>
@@ -314,7 +363,7 @@
 	</div>
 	<main>
 		<p>
-		I named the block "Prismarine" in the game Minecraft.
+		I named the block "Prismarine" in the game Minecraft. Still pretty proud of that one.
 		</p>
 		<p>
 		<blockquote class="twitter-tweet" data-lang="en" data-width="500" data-dnt="true">
